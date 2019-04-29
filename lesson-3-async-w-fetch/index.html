@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Make Asynchronous Requests</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="../css/styles.css" rel="stylesheet">
 </head>
 <body>
@@ -12,9 +13,11 @@
         <h1>What are you interested in today?</h1>
 
         <div class="site-container">
+            <div id="divMensagens" class="alert alert-danger  p15" role="alert">Os dados de login informados não correspondem a uma conta em nossos registros.</div>
             <form id="search-form" action="#">
                 <label for="search-keyword" class="visuallyhidden">What are you interested in today?</label>
-                <input id="search-keyword" type="text" name="search-keyword" placeholder="e.g. Android" required>
+                <input id="search-keyword" type="text" name="search-keyword" placeholder="e.g. Android" 
+                required data-errormessage-value-missing="Please input something">
                 <input id="submit-btn" type="submit" value="Submit">
             </form>
         </div>

@@ -4,9 +4,10 @@ const puppeteer = require('puppeteer');
   const browser = await puppeteer.launch({headless: false});
   const page = await browser.newPage();
   await page.goto('http://127.0.0.1:8887/lesson-3-async-w-fetch/');
-  const inputElement = await page.$('input[name="search-keyword"]');
-  await inputElement.type('dog');
-  await inputElement.press('Enter');
+  const inputElement = await page.$('input[name="search-keyword"]');  
+  await inputElement.press('Enter'); 
+  const teste = inputElement.title;
+  console.log('teste', teste);
 
 
   // Get the "viewport" of the page, as reported by the page.
